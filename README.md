@@ -1,8 +1,8 @@
 # Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-
- AIM:
+## AIM:
 To study about the different digital IC’s and to verify the truth table in Quartus for the basic logic gates using Verilog programming.
 
-Equipments Required:
+## Equipments Required:
 Hardware – PCs, Cyclone II , USB flasher
 Software – Quartus prime
 Theory
@@ -51,22 +51,39 @@ The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will gi
 
 Y= A⊕B
 
-Procedure
+## Procedure:
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed.
 If the output is 1, then the bulb glows.
 Check all the gates following the same procedure.
-Program:
-/*
+## Program:
 Program to verify the truth table in quartus for the basic logic gates using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+Developed by: Divakar R
+
+RegisterNumber: 22008432
+```
+module volg_exp1 (a, b, y1, y2, y3, y4, y5, y6, y7, y8);
+input a, b;
+output y1, y2, y3, y4, y5, y6, y7, y8;
+not (y1, a);
+not (y2, b);
+or (y3, a, b);
+and (y4, a, b);
+xor (y5, a, b);
+xnor(y6, a, b);
+nor (y7, a, b);
+nand (y8, a, b);
+endmodule
+```
 Logic symbol & Truthtable
 RTL realization
-Output:
-RTL
 
-Result:
+## Output:
+RTL
+![](logic_gate.png)
+WAVEFORM
+![](waveform.png)
+## Result:
 Thus the different digital IC’s are studied and the truth table for different logic gates are verified.
